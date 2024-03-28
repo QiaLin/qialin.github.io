@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Qia Lin Self-driving car - No libararies</title>
+    <link rel= "stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <div id="orientationNotice"></div>
+    <div id="verticalButtons">
+        <label>AI car Simulator</label>
+        <label>By Qia Lin</label>
+    </div>
+        <div id="verticalButtons" class = "redColorClass">
+        <label >🕹️🟥 Car </label>
+        <button onclick="addDummyCar()">+1🟥</button>
+        <button onclick="removeDummyCar()">-1🟥</button>
+        <button onclick="restartGame()">🗑️🟥</button>
+        </div>
+    <canvas id = "carCanvas"></canvas>
+    <div id="verticalButtons" class = "blueColorClass" >
+        <label>🕹️🟦 Car</label>
+        <button id = "addCarButton" onclick="toggleAddCars()">+20🟦</button>
+        <button id = "deleteCarButton" onclick="toggleDeleteCars()">-20🟦</button>
+        <button onclick="save()">💾AI🧠</button>
+        <button onclick="discard()">🗑️AI🧠</button>
+        <button id = "increaseMutateButton" onclick="increaseMutate()">🟦🧠👉+0.1</button>
+        <button id = "decreaseMutateButton" onclick="decreaseMutate()">🟦🧠👉-0.1</button>
+        <button onclick="refresh()">🔄AI🧠</button> <!-- Refresh button with emoji and onclick method -->
+        <!-- <button onclick="togglePause()">⏸️</button> Pause button with emoji and onclick method -->
+        <button onclick="saveObjectToFile()">⬇️AI🧠</button>
+        <button onclick="loadObjectFromFile()">📂AI🧠</button>
+        <button onclick="loadAuthorAI()">👑AI🧠</button>
+ 
+        <button id = "toggleHuman" onclick="toggleHuman()">⌨️</button>
+        <button onclick="localStorageClear()">🗑️</button>
+
+    </div> 
+    <canvas id = "networkCanvas"></canvas>
+    <script src = "visualizer.js"></script>
+    <script src = "utils.js"></script>
+    <script src = "sensor.js"></script>
+    <script src = "road.js"></script>
+    <script src = "controls.js"></script>
+    <script src = "car.js"></script>
+    <script src = "network.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>
